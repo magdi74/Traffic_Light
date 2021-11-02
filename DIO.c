@@ -1,6 +1,8 @@
 # include "bitwise_operation.h"
 # include "DIO.h"
 # include "type.h"
+#include <stdbool.h>
+#include <stdint.h>
 
 void DIO_Init (int_8 port, int_8 pin, int_8 dir)
 {
