@@ -1,0 +1,243 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+DIO.c
+# include "bitwise_operation.h"
+# include "DIO.h"
+# include "tm4c123gh6pm.h"
+# include "type.h"
+# include <stdbool.h>
+# include <stdint.h>
+
+void DIO_Init (int8 port, int8 pin, int8 dir)
+{
+
+  set_bit(SYSCTL_RCGCGPIO_R, port)
+  while((SYSCTL_PRGPIO_R & port) == 0){};
+  
+    switch(port){
+        
+        case PORTA:
+        GPIO_PORTA_LOCK_R = 0x4C4F434B;
+        GPIO_PORTA_CR_R = 0x1F;
+        if (dir){
+          set_bit(GPIO_PORTA_DIR_R, pin)}
+        else{
+          clear_bit(GPIO_PORTA_DIR_R, pin)}
+        break;
+            
+        case PORTB:
+        GPIO_PORTB_LOCK_R = 0x4C4F434B;
+        GPIO_PORTB_CR_R = 0x1F;
+        if (dir){
+          set_bit(GPIO_PORTB_DIR_R, pin)}
+        else{
+          clear_bit(GPIO_PORTB_DIR_R, pin)}
+        break;
+              
+        case PORTC:
+        GPIO_PORTC_LOCK_R = 0x4C4F434B;
+        GPIO_PORTC_CR_R = 0x1F;
+        if (dir){
+          set_bit(GPIO_PORTC_DIR_R, pin)}
+        else{
+          clear_bit(GPIO_PORTC_DIR_R, pin)}
+        break;  
+              
+        case PORTD:
+        GPIO_PORTD_LOCK_R = 0x4C4F434B;
+        GPIO_PORTD_CR_R = 0x1F;
+        if (dir){
+          set_bit(GPIO_PORTD_DIR_R, pin)}
+        else{
+          clear_bit(GPIO_PORTD_DIR_R, pin)}
+        break;
+              
+        case PORTE:
+        GPIO_PORTE_LOCK_R = 0x4C4F434B;
+        GPIO_PORTE_CR_R = 0x1F;
+        if (dir){
+          set_bit(GPIO_PORTE_DIR_R, pin)}
+        else{
+          clear_bit(GPIO_PORTE_DIR_R, pin)}
+        break;
+              
+        case PORTF:
+        GPIO_PORTF_LOCK_R = 0x4C4F434B;
+        GPIO_PORTF_CR_R = 0x1F;
+        if (dir){
+          set_bit(GPIO_PORTF_DIR_R, pin)}
+        else{
+          clear_bit(GPIO_PORTF_DIR_R, pin)}
+        GPIO_PORTF_PUR_R = 0x11;
+        GPIO_PORTF_DEN_R = 0x1F;
+        break;
+    }
+
+}
+
+void DIO_WritePort(int8 port,int8 value){
+  
+    switch(port){
+          case PORTA:
+            GPIO_PORTA_DATA_R = value;
+            break;
+        
+          case PORTB:
+            GPIO_PORTB_DATA_R = value;
+            break; 
+        
+          case PORTC:
+            GPIO_PORTC_DATA_R = value;
+            break;
+        
+          case PORTD:
+            GPIO_PORTD_DATA_R = value;
+            break;
+        
+          case PORTE:
+            GPIO_PORTE_DATA_R = value;
+            break;
+        
+          case PORTF:
+            GPIO_PORTF_DATA_R = value;
+            break;
+    }
+}
+
+
+void DIO_WritePin (int8 port, int8 pin, int8 value)
+{
+
+    switch(port){
+
+        case PORTA:
+        if (value == 1){
+            set_bit(GPIO_PORTA_DATA_R, pin)}
+        else if (value == 0){
+             clear_bit(GPIO_PORTA_DATA_R, pin)}
+        break;
+
+        case PORTB:
+        if (value == 1){
+            set_bit(GPIO_PORTB_DATA_R, pin)}
+        else if (value == 0){
+             clear_bit(GPIO_PORTB_DATA_R, pin)}
+        break;
+
+        case PORTC:
+        if (value == 1){
+            set_bit(GPIO_PORTC_DATA_R, pin)}
+        else if (value == 0){
+            clear_bit(GPIO_PORTC_DATA_R, pin)}
+        break;
+
+        case PORTD:
+        if (value == 1){
+            set_bit(GPIO_PORTD_DATA_R, pin)}
+        else if (value == 0){
+             clear_bit(GPIO_PORTD_DATA_R, pin)}
+        break;
+
+        case PORTE:
+        if (value == 1){
+            set_bit(GPIO_PORTE_DATA_R, pin)}
+        else if (value == 0){
+            clear_bit(GPIO_PORTE_DATA_R, pin)}
+        break;
+
+        case PORTF:
+        if (value == 1){
+            set_bit(GPIO_PORTF_DATA_R, pin)}
+        else if (value == 0){
+            clear_bit(GPIO_PORTF_DATA_R, pin)}
+        break;
+    }
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+DIO.h
+
+# include "type.h"
+
+# define IN 0
+# define OUT 1
+# define PORTA 0
+# define PORTB 1
+# define PORTC 2
+# define PORTD 3
+# define PORTE 4
+# define PORTF 5
+
+void DIO_Init (int8 port, int8 pin, int8 dir);
+void DIO_WritePort(int8 port,int8 value);
+void DIO_WritePin (int8 port, int8 pin, int8 value);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+main.c
+
+# include "DIO.h"
+# include <stdint.h>
+# include "tm4c123gh6pm.h"
+# include "bitwise_operation.h"
+
+int main()
+{
+  DIO_Init(PORTF,0,IN);
+  DIO_Init(PORTF,1,OUT);
+  DIO_Init(PORTF,2,OUT);
+  DIO_Init(PORTF,3,OUT);
+  DIO_Init(PORTF,4,IN);
+ // DIO_WritePort(PORTF,0x0E);
+  
+  
+  //set_bit(SYSCTL_RCGCGPIO_R,5)
+  //SYSCTL_RCGCGPIO_R |= 0x00000020;
+
+  //while((SYSCTL_PRGPIO_R&0x00000020) == 0){};
+  
+  //GPIO_PORTF_LOCK_R = 0x4C4F434B;
+ 
+  //GPIO_PORTF_CR_R = 0x1F;
+  //GPIO_PORTF_DIR_R = 0x0E;
+  
+  //GPIO_PORTF_PUR_R = 0x11;
+  //GPIO_PORTF_DEN_R = 0x1F;
+  
+  //GPIO_PORTF_DATA_R = 0x0E;
+  
+  
+  
+  while(1){
+
+    int volatile counter = 0 ;
+  //  GPIO_PORTF_DATA_R = 0x0E; //white color
+
+    while(counter < 1000000){
+    DIO_WritePort(PORTF,0x02);
+    GPIO_PORTF_DATA_R = 0x02; //red color
+    ++counter;
+
+  }
+  
+  counter = 0 ;
+  
+  while(counter < 1000000){
+    DIO_WritePort(PORTF,0x04);
+    GPIO_PORTF_DATA_R = 0x04; //blue color
+    ++counter;
+
+  }
+  counter = 0 ;
+  
+  while(counter < 1000000){
+    DIO_WritePort(PORTF,0x08);
+    GPIO_PORTF_DATA_R = 0x08; //green color
+    ++counter;
+  }
+
+  };
+
+
+
+
+  return 0;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
