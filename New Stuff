@@ -11,13 +11,13 @@ void DIO_Init (int8 port, int8 pin, int8 dir)
 {
 
   set_bit(SYSCTL_RCGCGPIO_R, port)
-  while((SYSCTL_PRGPIO_R & port) == 0){};
+  //while((SYSCTL_PRGPIO_R & port) == 0){};
   
     switch(port){
         
         case PORTA:
         GPIO_PORTA_LOCK_R = 0x4C4F434B;
-        GPIO_PORTA_CR_R = 0x1F;
+        set_bit(GPIO_PORTA_CR_R, pin)
         if (dir){
           set_bit(GPIO_PORTA_DIR_R, pin)}
         else{
@@ -26,7 +26,7 @@ void DIO_Init (int8 port, int8 pin, int8 dir)
             
         case PORTB:
         GPIO_PORTB_LOCK_R = 0x4C4F434B;
-        GPIO_PORTB_CR_R = 0x1F;
+        set_bit(GPIO_PORTA_CR_R, pin)
         if (dir){
           set_bit(GPIO_PORTB_DIR_R, pin)}
         else{
@@ -35,7 +35,7 @@ void DIO_Init (int8 port, int8 pin, int8 dir)
               
         case PORTC:
         GPIO_PORTC_LOCK_R = 0x4C4F434B;
-        GPIO_PORTC_CR_R = 0x1F;
+        set_bit(GPIO_PORTA_CR_R, pin)
         if (dir){
           set_bit(GPIO_PORTC_DIR_R, pin)}
         else{
@@ -44,7 +44,7 @@ void DIO_Init (int8 port, int8 pin, int8 dir)
               
         case PORTD:
         GPIO_PORTD_LOCK_R = 0x4C4F434B;
-        GPIO_PORTD_CR_R = 0x1F;
+        set_bit(GPIO_PORTA_CR_R, pin)
         if (dir){
           set_bit(GPIO_PORTD_DIR_R, pin)}
         else{
@@ -53,7 +53,7 @@ void DIO_Init (int8 port, int8 pin, int8 dir)
               
         case PORTE:
         GPIO_PORTE_LOCK_R = 0x4C4F434B;
-        GPIO_PORTE_CR_R = 0x1F;
+        set_bit(GPIO_PORTA_CR_R, pin)
         if (dir){
           set_bit(GPIO_PORTE_DIR_R, pin)}
         else{
@@ -62,13 +62,15 @@ void DIO_Init (int8 port, int8 pin, int8 dir)
               
         case PORTF:
         GPIO_PORTF_LOCK_R = 0x4C4F434B;
-        GPIO_PORTF_CR_R = 0x1F;
+        set_bit(GPIO_PORTA_CR_R, pin)
         if (dir){
           set_bit(GPIO_PORTF_DIR_R, pin)}
         else{
-          clear_bit(GPIO_PORTF_DIR_R, pin)}
-        GPIO_PORTF_PUR_R = 0x11;
-        GPIO_PORTF_DEN_R = 0x1F;
+          clear_bit(GPIO_PORTF_DIR_R, pin)
+          set_bit(GPIO_PORTF_PUR_R, pin)}
+        
+        set_bit(GPIO_PORTF_DEN_R, pin)
+        //GPIO_PORTF_DEN_R = 0x1F;
         break;
     }
 
