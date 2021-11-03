@@ -1,8 +1,9 @@
 # include "bitwise_operation.h"
 # include "DIO.h"
-# include "type.h"
-#include <stdbool.h>
-#include <stdint.h>
+# include "tm4c123gh6pm.h"
+# include "types.h"
+# include <stdbool.h>
+# include <stdint.h>
 
 void DIO_Init (int_8 port, int_8 pin, int_8 dir)
 {
@@ -12,7 +13,7 @@ void DIO_Init (int_8 port, int_8 pin, int_8 dir)
   
     switch(port){
         
-      case port PORTA:
+      case PORTA:
         GPIO_PORTA_LOCK_R = 0x4C4F434B;
         if (dir)
           set_bit(GPIO_PORTA_DIR_R, pin)
@@ -21,7 +22,7 @@ void DIO_Init (int_8 port, int_8 pin, int_8 dir)
         break;
         
               
-      case port PORTB:
+      case PORTB:
         GPIO_PORTB_LOCK_R = 0x4C4F434B;
         if (dir)
           set_bit(GPIO_PORTB_DIR_R, pin)
@@ -29,7 +30,7 @@ void DIO_Init (int_8 port, int_8 pin, int_8 dir)
               clear_bit(GPIO_PORTB_DIR_R, pin)
         break;
               
-       case port PORTC:
+       case PORTC:
         GPIO_PORTC_LOCK_R = 0x4C4F434B;
         if (dir)
           set_bit(GPIO_PORTC_DIR_R, pin)
@@ -37,7 +38,7 @@ void DIO_Init (int_8 port, int_8 pin, int_8 dir)
               clear_bit(GPIO_PORTC_DIR_R, pin)
         break;  
               
-       case port PORTD:
+       case PORTD:
         GPIO_PORTD_LOCK_R = 0x4C4F434B;
         if (dir)
           set_bit(GPIO_PORTD_DIR_R, pin)
@@ -45,7 +46,7 @@ void DIO_Init (int_8 port, int_8 pin, int_8 dir)
               clear_bit(GPIO_PORTD_DIR_R, pin)
         break;
               
-        case port PORTE:
+        case PORTE:
         GPIO_PORTE_LOCK_R = 0x4C4F434B;
         if (dir)
           set_bit(GPIO_PORTE_DIR_R, pin)
@@ -53,7 +54,7 @@ void DIO_Init (int_8 port, int_8 pin, int_8 dir)
               clear_bit(GPIO_PORTE_DIR_R, pin)
         break;
               
-        case port PORTF:
+        case PORTF:
         GPIO_PORTF_LOCK_R = 0x4C4F434B;
         if (dir)
           set_bit(GPIO_PORTF_DIR_R, pin)
@@ -66,27 +67,27 @@ void DIO_Init (int_8 port, int_8 pin, int_8 dir)
 
 void DIO_WritePort(int_8 port,int_8 value){
 switch(port){
-      case port PORTA:
+      case PORTA:
         GPIO_PORTA_DATA_R = value;
         break;
     
-      case port PORTB:
+      case PORTB:
         GPIO_PORTB_DATA_R = value;
         break; 
     
-      case port PORTC:
+      case PORTC:
         GPIO_PORTC_DATA_R = value;
         break;
     
-      case port PORTD:
+      case PORTD:
         GPIO_PORTD_DATA_R = value;
         break;
     
-      case port PORTE:
+      case PORTE:
         GPIO_PORTE_DATA_R = value;
         break;
     
-      case port PORTF:
+      case PORTF:
         GPIO_PORTF_DATA_R = value;
         break;
     }
@@ -98,7 +99,7 @@ void DIO_WritePin (int_8 port, int_8 pin, int_8 value)
 
     switch(port){
 
-        case port PORTA:
+        case PORTA:
         if (value == 1){
             set_bit(GPIO_PORTA_DATA_R, pin)
             }
@@ -107,7 +108,7 @@ void DIO_WritePin (int_8 port, int_8 pin, int_8 value)
                 }
         break;
 
-        case port PORTB:
+        case PORTB:
         if (value == 1){
             set_bit(GPIO_PORTB_DATA_R, pin)
             }
@@ -116,7 +117,7 @@ void DIO_WritePin (int_8 port, int_8 pin, int_8 value)
                 }
         break;
 
-        case port PORTC:
+        case PORTC:
         if (value == 1){
             set_bit(GPIO_PORTC_DATA_R, pin)
             }
@@ -125,7 +126,7 @@ void DIO_WritePin (int_8 port, int_8 pin, int_8 value)
                 }
         break;
 
-        case port PORTD:
+        case PORTD:
         if (value == 1){
             set_bit(GPIO_PORTD_DATA_R, pin)
             }
@@ -134,7 +135,7 @@ void DIO_WritePin (int_8 port, int_8 pin, int_8 value)
                 }
         break;
 
-        case port PORTE:
+        case PORTE:
         if (value == 1){
             set_bit(GPIO_PORTE_DATA_R, pin)
             }
@@ -143,7 +144,7 @@ void DIO_WritePin (int_8 port, int_8 pin, int_8 value)
                 }
         break;
 
-        case port PORTF:
+        case PORTF:
         if (value == 1){
             set_bit(GPIO_PORTF_DATA_R, pin)
             }
