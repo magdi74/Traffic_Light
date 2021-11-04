@@ -24,18 +24,28 @@ rule PDBLINK
 
 
 #Build steps
-build D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
-  xclcommand = -source_file "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\main.c" -xcl_file "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.xcl" -macro_file "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
-  flags = "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\main.c" -o "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.tmp"
-  rspfile_name = D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.xcl.rsp
+build D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\DIO.c" -xcl_file "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.xcl" -macro_file "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\DIO.c" -o "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.tmp"
+  rspfile_name = D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.xcl.rsp
 
-build D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.pbi : INDEXER D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.xcl |  $
-D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\main.c
-  flags = "-out=D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.pbi" -f "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.xcl"
+build D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\main.c" -xcl_file "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.xcl" -macro_file "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.tmp" -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\bin\iccarm.exe"
+  flags = "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\main.c" -o "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\Obj\\" --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.0\arm\inc\c\DLib_Config_Normal.h" -Ol --predef_macros "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.tmp"
+  rspfile_name = D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.xcl.rsp
 
-build D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\labs.pbw : MAKEBROWSE D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\labs.pbd
-  flags = "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\labs.pbd" -output "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\labs.pbw"
+build D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.pbi : INDEXER D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.xcl |  $
+D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\DIO.c
+  flags = "-out=D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.pbi" -f "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.xcl"
 
-build D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\labs.pbd : PDBLINK D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.pbi
-  flags = -M "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\labs.pbd" "D$:\Magdi\University\Semester$ 7\EmbIAR\Labs\Debug\BrowseInfo\main.pbi"
+build D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.pbi : INDEXER D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.xcl |  $
+D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\main.c
+  flags = "-out=D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.pbi" -f "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.xcl"
+
+build D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\labs.pbw : MAKEBROWSE D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\labs.pbd
+  flags = "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\labs.pbd" -output "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\labs.pbw"
+
+build D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\labs.pbd : PDBLINK D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.pbi |  $
+D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.pbi
+  flags = -M "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\labs.pbd" "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\DIO.pbi" "D$:\Magdi\University\Semester$ 7\embedded\Traffic_Light\Debug\BrowseInfo\main.pbi"
 
