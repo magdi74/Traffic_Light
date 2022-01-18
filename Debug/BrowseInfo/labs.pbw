@@ -95018,6 +95018,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@6617@macro@_NOEXCEPT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_NOEXCEPT",
+    "location": {
+      "column": "11",
+      "line": "190",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_NOEXCEPT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@6605@macro@_NOEXCEPT",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95028,6 +95042,20 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
     },
     "name": "_NOEXCEPT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@6733@macro@_THREAD_LOCAL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_THREAD_LOCAL",
+    "location": {
+      "column": "15",
+      "line": "196",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_THREAD_LOCAL",
     "origin": "system_include",
     "scope": null
   },
@@ -95046,6 +95074,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@6862@macro@_Restrict",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_Restrict",
+    "location": {
+      "column": "13",
+      "line": "201",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_Restrict",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@6850@macro@_Restrict",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95056,6 +95098,20 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
     },
     "name": "_Restrict",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@7018@macro@_MBMAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_MBMAX",
+    "location": {
+      "column": "9",
+      "line": "208",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_MBMAX",
     "origin": "system_include",
     "scope": null
   },
@@ -95074,6 +95130,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@7075@macro@_MAX_EXP_DIG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_MAX_EXP_DIG",
+    "location": {
+      "column": "9",
+      "line": "211",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_MAX_EXP_DIG",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@7063@macro@_MAX_EXP_DIG",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95088,6 +95158,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@7102@macro@_MAX_INT_DIG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_MAX_INT_DIG",
+    "location": {
+      "column": "9",
+      "line": "212",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_MAX_INT_DIG",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@7090@macro@_MAX_INT_DIG",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95098,6 +95182,20 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
     },
     "name": "_MAX_INT_DIG",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@7130@macro@_MAX_SIG_DIG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_MAX_SIG_DIG",
+    "location": {
+      "column": "9",
+      "line": "213",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_MAX_SIG_DIG",
     "origin": "system_include",
     "scope": null
   },
@@ -95144,6 +95242,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@7576@macro@_WCMIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_WCMIN",
+    "location": {
+      "column": "11",
+      "line": "233",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_WCMIN",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@7564@macro@_WCMIN",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95154,6 +95266,20 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
     },
     "name": "_WCMIN",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@7597@macro@_WIMIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_WIMIN",
+    "location": {
+      "column": "11",
+      "line": "234",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_WIMIN",
     "origin": "system_include",
     "scope": null
   },
@@ -95172,6 +95298,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@7624@macro@_WCMAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_WCMAX",
+    "location": {
+      "column": "9",
+      "line": "236",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_WCMAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@7612@macro@_WCMAX",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95186,6 +95326,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@7657@macro@_WIMAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_WIMAX",
+    "location": {
+      "column": "9",
+      "line": "237",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_WIMAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@7645@macro@_WIMAX",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95196,6 +95350,20 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
     },
     "name": "_WIMAX",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@7718@macro@_NULL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_NULL",
+    "location": {
+      "column": "9",
+      "line": "240",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_NULL",
     "origin": "system_include",
     "scope": null
   },
@@ -95426,6 +95594,20 @@
     "scope": null
   },
   {
+    "ID": "c:yvals.h@9575@macro@_Mbstinit",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_Mbstinit",
+    "location": {
+      "column": "11",
+      "line": "303",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_Mbstinit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:yvals.h@9563@macro@_Mbstinit",
     "What": "MacroDef",
     "defdec": "Def",
@@ -95436,6 +95618,20 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
     },
     "name": "_Mbstinit",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@9648@macro@_HAS_PRAGMA_PRINTF_ARGS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_HAS_PRAGMA_PRINTF_ARGS",
+    "location": {
+      "column": "9",
+      "line": "307",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_HAS_PRAGMA_PRINTF_ARGS",
     "origin": "system_include",
     "scope": null
   },
@@ -95551,6 +95747,34 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
     },
     "name": "_FPOSOFF",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@10462@macro@_FPOSOFF",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_FPOSOFF",
+    "location": {
+      "column": "11",
+      "line": "348",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_FPOSOFF",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:yvals.h@10540@macro@_MULTI_THREAD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_MULTI_THREAD",
+    "location": {
+      "column": "9",
+      "line": "352",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\yvals.h"
+    },
+    "name": "_MULTI_THREAD",
     "origin": "system_include",
     "scope": null
   },
@@ -96087,6 +96311,20 @@
     "scope": null
   },
   {
+    "ID": "c:DLib_Defaults.h@16880@macro@_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
+    "location": {
+      "column": "11",
+      "line": "562",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Defaults.h@16863@macro@_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
     "What": "MacroDef",
     "defdec": "Def",
@@ -96101,6 +96339,20 @@
     "scope": null
   },
   {
+    "ID": "c:DLib_Defaults.h@17280@macro@__WEAK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__WEAK",
+    "location": {
+      "column": "11",
+      "line": "579",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "__WEAK",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Defaults.h@17263@macro@__WEAK",
     "What": "MacroDef",
     "defdec": "Def",
@@ -96111,6 +96363,20 @@
       "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Defaults.h"
     },
     "name": "__WEAK",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@17335@macro@__WEAK_DEFS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__WEAK_DEFS",
+    "location": {
+      "column": "11",
+      "line": "580",
+      "path": "C:\\Program Files\\IAR Systems\\Embedded Workbench 9.0\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "__WEAK_DEFS",
     "origin": "system_include",
     "scope": null
   },

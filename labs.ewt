@@ -2840,21 +2840,12 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\..\Embedded\bitwise_operation.h</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\DIO.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\DIO.h</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\..\Embedded\tm4c123gh6pm.h</name>
+        <name>$PROJ_DIR$\tm4c123gh6pm.h</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\type.h</name>
+        <name>$PROJ_DIR$\tm4c123gh6pm_startup_ccs.c</name>
     </file>
 </project>
